@@ -1,6 +1,7 @@
 import React from 'react'
 import '@fontsource/blinker'
 import {
+  Box,
   Divider,
   Flex,
   HStack,
@@ -39,13 +40,12 @@ const Footer = () => {
             Seguir a Warcraft
           </Text>
           {socialMedia.map((item) => (
-            <Link href={item.link} passHref>
+            <Link href={item.link} passHref key={item.id}>
               <a>
                 <Text
                   color={'brand.yellow'}
                   _hover={{ color: 'white' }}
                   fontSize='3xl'
-                  key={item.id}
                 >
                   <item.icon />
                 </Text>
@@ -65,7 +65,7 @@ const Footer = () => {
           <Image src='/images/blizzard_logo.svg' w={100} />
           <HStack>
             {footerOptions.map((option, i) => (
-              <>
+              <HStack key={option.id}>
                 <Link href={option.link} passHref>
                   <a>
                     <Text
@@ -81,7 +81,7 @@ const Footer = () => {
                   </a>
                 </Link>
                 {i !== footerOptions.length - 1 && <Divider w={'2'} />}
-              </>
+              </HStack>
             ))}
           </HStack>
           <Text textAlign='center' fontSize={'14px'} color={'brand.yellow'}>
