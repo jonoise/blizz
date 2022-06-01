@@ -6,10 +6,9 @@ const MidCardOne = () => {
   return (
     <SimpleGrid columns={2}>
       {cards.map((card) => (
-        <Link href={'/'}>
+        <Link key={card.id} href={'/'}>
           <a>
             <Stack
-              key={card.id}
               h={'400px'}
               bg='#211511'
               w={'full'}
