@@ -3,7 +3,14 @@ import React from 'react'
 const Video = () => {
   return (
     <video
-      style={{ position: 'absolute', top: 0, zIndex: -1 }}
+      style={{
+        backgroundColor: '#1a1',
+        position: 'absolute',
+        top: '10',
+        left: '-20',
+        zIndex: -1,
+        minWidth: '130%',
+      }}
       autoPlay={true}
       loop={true}
       preload='auto'

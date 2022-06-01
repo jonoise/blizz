@@ -757,6 +757,11 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
+"@fontsource/blinker@^4.5.7":
+  version "4.5.7"
+  resolved "https://registry.yarnpkg.com/@fontsource/blinker/-/blinker-4.5.7.tgz#62f930d3664ae80ce01c9e894685a4cd498925a9"
+  integrity sha512-J2u5e8EML5z8H1EcMYOp2GwkYJao9dVljqseGON395TK4U5bLGcraEpEJLMimwgEEml1MD69SycCuuSjyEgaOQ==
+
 "@humanwhocodes/config-array@^0.9.2":
   version "0.9.5"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.9.5.tgz#2cbaf9a89460da24b5ca6531b8bbfc23e1df50c7"
