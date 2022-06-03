@@ -8,6 +8,7 @@ const GameRecommendations = () => {
       <SimpleGrid gap={8} columns={{ base: 1, md: 2, xl: 4 }}>
         {gRecomendations.map((game) => (
           <Flex
+            key={game.id}
             direction={'column'}
             h='96'
             bg={'store.lightDark'}
@@ -37,7 +38,7 @@ const GameRecommendations = () => {
             </Stack>
             <Flex p={4}>
               {game.discount ? (
-                <Flex w={'full'} justify={'space-between'}>
+                <Flex key={game.id} w={'full'} justify={'space-between'}>
                   <Stack direction={'row'} align='center'>
                     <Text
                       color={'store.toxicGreen'}

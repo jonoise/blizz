@@ -18,9 +18,9 @@ const GamesRow = () => {
         </Text>
         <Flex wrap={'wrap'}>
           {games.map((g) => (
-            <Link href={g.href}>
+            <Link key={g.id} href={g.href}>
               <a>
-                <Box key={g.id} mr='4'>
+                <Box mr='4'>
                   <Image w={10} src={g.img} />
                 </Box>
               </a>
