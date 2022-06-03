@@ -35,7 +35,7 @@ const MidCardTwo = () => {
             <Text
               color='#ebddc2'
               fontSize={{ base: 'sm', lg: '22px' }}
-              w={{ base: 'full', md: '40%' }}
+              w={{ base: 'full', md: '70%' }}
               textAlign={card.pos === 'start' ? 'left' : 'right'}
             >
               {card.desc}
