@@ -4,7 +4,7 @@ import React from 'react'
 
 const MidCardOne = () => {
   return (
-    <SimpleGrid columns={2}>
+    <SimpleGrid columns={{ base: 1, lg: 2 }}>
       {cards.map((card) => (
         <Link key={card.id} href={'/'}>
           <a>
@@ -30,7 +30,11 @@ const MidCardOne = () => {
                 >
                   {card.sub}
                 </Text>
-                <Text fontSize={'3xl'} fontWeight='bold' color={'brand.yellow'}>
+                <Text
+                  fontSize={{ base: 'xl', md: '2xl', xl: '3xl' }}
+                  fontWeight='bold'
+                  color={'brand.yellow'}
+                >
                   {card.title}
                 </Text>
               </VStack>

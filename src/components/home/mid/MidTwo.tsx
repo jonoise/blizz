@@ -8,24 +8,34 @@ const MidCardTwo = () => {
         <Flex
           key={card.id}
           bg='red'
-          h='500px'
+          h={{ base: '300px', lg: '500px' }}
           backgroundImage={card.img}
           backgroundSize='cover'
-          backgroundPosition='center'
+          backgroundPosition={{ base: 'right', lg: 'center' }}
           p={4}
         >
-          <Stack spacing={4} px={'10'} justify={'center'} align={card.pos}>
+          <Stack
+            spacing={{ base: 2, lg: 4 }}
+            px={'10'}
+            justify={'center'}
+            align={card.pos}
+          >
             {card.sub && (
               <Text color='#ebddc2' fontSize='xl' fontWeight='bold'>
                 {card.sub}
               </Text>
             )}
-            <Text color={'white'} fontSize={'6xl'} fontWeight='black'>
+            <Text
+              color={'white'}
+              fontSize={{ base: 'xl', md: '2xl', lg: '5xl' }}
+              fontWeight='black'
+            >
               {card.title}
             </Text>
             <Text
               color='#ebddc2'
-              w={'40%'}
+              fontSize={{ base: 'sm', lg: '22px' }}
+              w={{ base: 'full', md: '40%' }}
               textAlign={card.pos === 'start' ? 'left' : 'right'}
             >
               {card.desc}

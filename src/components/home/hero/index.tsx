@@ -10,29 +10,37 @@ import {
 } from '@chakra-ui/react'
 import Link from 'next/link'
 import React from 'react'
+import Mobile from '../mid/Mobile'
 import Video from './Video'
 
 const Hero = () => {
   return (
-    <Box pos={'relative'} overflow='hidden'>
+    <Box pos={'relative'} overflow='hidden' bg={'black'}>
       <Video />
+      <Mobile />
       <Stack
         px={10}
         minH={'90vh'}
         justify={'center'}
         color={'white'}
-        maxW={'60%'}
+        maxW={{ base: '100%', md: '100%', lg: '60%' }}
+        align={{ base: 'center', md: 'center', lg: 'inherit' }}
         spacing='5'
+        zIndex={4}
       >
         <Heading
           textShadow={'0 0 1px transparent, 0 1px 2px rgb(0 0 0 / 80%)'}
-          fontSize={'52px'}
+          fontSize={{ base: '5xl', xl: '6xl' }}
+          textAlign={{ base: 'center', md: 'left' }}
+          zIndex={2}
           fontFamily='Blinker'
         >
           ANUNCIO DE DRAGONFLIGHT
         </Heading>
         <Text
-          fontSize={'22px'}
+          zIndex={2}
+          fontSize={{ base: 'lg', xl: '2xl' }}
+          textAlign={{ base: 'center', lg: 'left' }}
           textShadow='0 0 1px transparent, 0 1px 2px rgb(0 0 0 / 80%)'
           color={'#EBDDC2'}
         >
@@ -41,7 +49,9 @@ const Hero = () => {
           Shadowlands y juega hoy mismo para prepararte de cara al próximo
           capítulo de la saga Warcraft: ¡Dragonflight!
         </Text>
-        <Link href={'/'}>Explorar Dragonflight</Link>
+        <Box zIndex={4}>
+          <Link href={'/'}>Explorar Dragonflight</Link>
+        </Box>
         <HStack>
           <Flex border={'1px solid black'}>
             <Button variant={'primary'}>Trailer Cinemático</Button>
@@ -51,6 +61,7 @@ const Hero = () => {
           </Flex>
         </HStack>
       </Stack>
+
       <Stack position={'relative'} px={10} my='10' top='-10px'>
         <Text
           color={'white'}
@@ -67,7 +78,7 @@ const Hero = () => {
               <a>
                 <Flex
                   width={'100%'}
-                  h={'180px'}
+                  h={{ base: '300px', lg: '180px' }}
                   bg='black'
                   backgroundImage={`url(${article.img})`}
                   backgroundSize='cover'
@@ -87,6 +98,7 @@ const Hero = () => {
                       color={'brand.yellow'}
                       fontWeight='bold'
                       textShadow='0 0 1px transparent, 0 1px 2px rgb(0 0 0 / 80%)'
+                      fontSize={{ base: 'xl', xl: 'xs' }}
                     >
                       {article.title}
                     </Text>
