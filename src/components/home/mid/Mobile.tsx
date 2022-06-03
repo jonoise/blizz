@@ -8,7 +8,7 @@ const Mobile = () => {
       h={{ base: '50%', xl: '140vh' }}
       display={{ base: 'block', lg: 'none' }}
       w='full'
-      bg={'red'}
+      bg={'black'}
       backgroundImage='https://bnetcmsus-a.akamaihd.net/cms/template_resource/0JFDRGOV8UTV1623254306639.jpg'
       backgroundSize={'cover'}
       backgroundPosition={'center'}

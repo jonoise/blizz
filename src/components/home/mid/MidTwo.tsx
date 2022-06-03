@@ -7,7 +7,7 @@ const MidCardTwo = () => {
       {cards.map((card) => (
         <Flex
           key={card.id}
-          bg='red'
+          bg='black'
           h={{ base: '300px', lg: '500px' }}
           backgroundImage={card.img}
           backgroundSize='cover'

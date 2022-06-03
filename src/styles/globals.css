@@ -23,3 +23,18 @@ video {
   min-height: 100%;
   object-fit: fill;
 }
+
+.spinner {
+  height: 80px;
+  width: 80px;
+  background-image: url(https://images.blz-contentstack.com/v3/assets/bltf408a0557f4e4998/blt0b9d2037fd452d5d/spinner.base.webp);
+  animation: spinner 0.8s steps(21) infinite;
+}
+@keyframes spinner {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: -1680px;
+  }
+}

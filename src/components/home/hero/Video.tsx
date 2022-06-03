@@ -7,7 +7,7 @@ const Video = () => {
       pos={'absolute'}
       h={{ base: '160vh', xl: '140vh' }}
       display={{ base: 'none', lg: 'block' }}
-      bg={'red'}
+      bg={'black'}
     >
       <video autoPlay={true} loop={true} preload='auto' muted={true}>
         <source
