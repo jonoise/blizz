@@ -12,5 +12,11 @@ export const customTheme = extendTheme({
       yellow: '#f8b700',
       blue: '#00aeff',
     },
+    store: {
+      dark: '#15171E',
+      lightDark: '#22252A',
+      hoverLightDark: '#303338',
+      toxicGreen: '#6CDA02',
+    },
   },
 })

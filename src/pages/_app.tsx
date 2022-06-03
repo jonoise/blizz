@@ -3,7 +3,6 @@ import type { AppProps } from 'next/app'
 import { ChakraProvider } from '@chakra-ui/react'
 import { customTheme } from '@theme/index'
 import '@fontsource/blinker'
-import Head from 'next/head'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
