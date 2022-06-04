@@ -4,7 +4,7 @@ import React from 'react'
 
 const GamesRow = () => {
   return (
-    <Flex w={'full'} bg='store.dark' px={10}>
+    <Flex w={'full'} bg='store.dark' p={{ base: 2, md: 10 }}>
       <HStack
         bg='store.lightDark'
         justify='center'

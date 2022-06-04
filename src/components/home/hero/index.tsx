@@ -62,7 +62,7 @@ const Hero = () => {
         </HStack>
       </Stack>
 
-      <Stack position={'relative'} px={10} my='10' top='-10px'>
+      <Stack position={'relative'} px={{ base: 2, md: 10 }} my='10' top='-10px'>
         <Text
           color={'white'}
           fontSize='28px'

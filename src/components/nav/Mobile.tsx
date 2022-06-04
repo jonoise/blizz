@@ -30,7 +30,6 @@ interface MobileProps {
 const Mobile: FC<MobileProps> = (props) => {
   const { links } = props
   const { isOpen, onOpen, onClose } = useDisclosure()
-  const [navOpen, setNavOpen] = useState(false)
   const btnRef = React.useRef(null)
 
   return (
@@ -56,7 +55,7 @@ const Mobile: FC<MobileProps> = (props) => {
               link.href ? (
                 <Link key={link.id} href={link.href} passHref>
                   <a>
-                    <Text>{link.name.toUpperCase()}</Text>
+                    <Text fontSize={'xl'}>{link.name.toUpperCase()}</Text>
                   </a>
                 </Link>
               ) : (
@@ -70,6 +69,7 @@ const Mobile: FC<MobileProps> = (props) => {
                       fontWeight='bold'
                       _focus={{ boxShadow: 'none' }}
                       p={0}
+                      fontSize={'xl'}
                     >
                       {link.name.toUpperCase()}
                       <AccordionIcon />

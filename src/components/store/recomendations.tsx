@@ -3,7 +3,7 @@ import React from 'react'
 
 const GameRecommendations = () => {
   return (
-    <Stack px={10} py={10}>
+    <Stack p={{ base: 2, md: 10 }}>
       <Heading color={'white'}>Recomendado</Heading>
       <SimpleGrid gap={8} columns={{ base: 1, md: 2, xl: 4 }}>
         {gRecomendations.map((game) => (

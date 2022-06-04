@@ -9,7 +9,7 @@ import 'swiper/css/pagination'
 
 const StoreSlider = () => {
   return (
-    <Box p={10}>
+    <Box p={{ base: 2, md: 10 }}>
       <Swiper
         navigation={true}
         pagination={{ clickable: true }}
