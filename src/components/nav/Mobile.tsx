@@ -21,6 +21,7 @@ import {
 } from '@chakra-ui/react'
 import { ChevronDownIcon, ChevronUpIcon, HamburgerIcon } from '@chakra-ui/icons'
 import { NavItemProps } from '@appTypes/nav'
+import Link from 'next/link'
 
 interface MobileProps {
   links: NavItemProps[]
@@ -52,7 +53,13 @@ const Mobile: FC<MobileProps> = (props) => {
           <DrawerHeader></DrawerHeader>
           <DrawerBody color={'white'} fontWeight='bold'>
             {links.map((link) =>
-              link.children ? (
+              link.href ? (
+                <Link key={link.id} href={link.href} passHref>
+                  <a>
+                    <Text>{link.name.toUpperCase()}</Text>
+                  </a>
+                </Link>
+              ) : (
                 <Accordion key={link.id} allowMultiple>
                   <AccordionItem
                     borderTopWidth={0}
@@ -68,7 +75,7 @@ const Mobile: FC<MobileProps> = (props) => {
                       <AccordionIcon />
                     </AccordionButton>
                     <AccordionPanel p={0}>
-                      {link.children.map((child) => (
+                      {link.children?.map((child) => (
                         <HStack key={child.id}>
                           <Image w={10} src={child.icon} />
                           <Text>{child.name}</Text>
@@ -77,8 +84,6 @@ const Mobile: FC<MobileProps> = (props) => {
                     </AccordionPanel>
                   </AccordionItem>
                 </Accordion>
-              ) : (
-                <Text key={link.id}>{link.name.toUpperCase()}</Text>
               )
             )}
           </DrawerBody>
