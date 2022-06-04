@@ -53,7 +53,7 @@ const Mobile: FC<MobileProps> = (props) => {
           <DrawerBody color={'white'} fontWeight='bold'>
             {links.map((link) =>
               link.children ? (
-                <Accordion allowMultiple>
+                <Accordion key={link.id} allowMultiple>
                   <AccordionItem
                     borderTopWidth={0}
                     borderBottomWidth={0}
@@ -69,7 +69,7 @@ const Mobile: FC<MobileProps> = (props) => {
                     </AccordionButton>
                     <AccordionPanel p={0}>
                       {link.children.map((child) => (
-                        <HStack>
+                        <HStack key={child.id}>
                           <Image w={10} src={child.icon} />
                           <Text>{child.name}</Text>
                         </HStack>
@@ -78,9 +78,7 @@ const Mobile: FC<MobileProps> = (props) => {
                   </AccordionItem>
                 </Accordion>
               ) : (
-                <>
-                  <Text>{link.name.toUpperCase()}</Text>
-                </>
+                <Text key={link.id}>{link.name.toUpperCase()}</Text>
               )
             )}
           </DrawerBody>
