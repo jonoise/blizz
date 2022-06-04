@@ -8,10 +8,10 @@ const MidCardTwo = () => {
         <Flex
           key={card.id}
           bg='black'
-          h={{ base: '300px', lg: '500px' }}
+          h={{ base: '400px', lg: '500px' }}
           backgroundImage={card.img}
           backgroundSize='cover'
-          backgroundPosition={{ base: 'right', lg: 'center' }}
+          backgroundPosition={{ base: '50% 50%', lg: 'center' }}
           p={4}
         >
           <Stack

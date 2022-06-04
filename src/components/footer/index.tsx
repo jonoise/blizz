@@ -30,7 +30,7 @@ const Footer = () => {
         backgroundPosition='center'
         backgroundSize={'cover'}
       >
-        <HStack spacing={5}>
+        <HStack spacing={{ base: 2, md: 5 }}>
           <Text
             fontWeight={'bold'}
             fontSize='xl'
@@ -63,7 +63,10 @@ const Footer = () => {
       >
         <VStack py={10}>
           <Image src='/images/blizzard_logo.svg' w={100} />
-          <HStack>
+          <Stack
+            direction={{ base: 'column', md: 'row' }}
+            align={{ base: 'center', md: 'inherit' }}
+          >
             {footerOptions.map((option, i) => (
               <HStack key={option.id}>
                 <Link href={option.link} passHref>
@@ -80,10 +83,12 @@ const Footer = () => {
                     </Text>
                   </a>
                 </Link>
-                {i !== footerOptions.length - 1 && <Divider w={'2'} />}
+                {i !== footerOptions.length - 1 && (
+                  <Divider display={{ base: 'none', md: 'block' }} w={'2'} />
+                )}
               </HStack>
             ))}
-          </HStack>
+          </Stack>
           <Text textAlign='center' fontSize={'14px'} color={'brand.yellow'}>
             ©2022 BLIZZARD ENTERTAINMENT, INC. TODOS LOS DERECHOS RESERVADOS.
           </Text>

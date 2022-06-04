@@ -5,7 +5,8 @@ export const ThemeButton = {
       textTransform: 'uppercase',
       bg: 'rgba(0, 0, 0, 0.4)',
       color: 'brand.orange',
-      p: 6,
+      p: { base: 1, lg: 6 },
+      fontSize: { base: 'xs', lg: 'lg' },
       border: '1px solid #f7b10a',
       _hover: { bg: '#cf6e00', color: '#ffd87a' },
       _focus: { boxShadow: 'none' },
@@ -14,8 +15,9 @@ export const ThemeButton = {
     secondary: {
       rounded: 'none',
       bg: 'rgba(159, 22, 0, 0.65)',
-      py: 6,
-      px: 12,
+      p: { base: 1, lg: 6 },
+      fontSize: { base: 'xs', lg: 'lg' },
+
       border: '1px solid #9f1600',
       color: 'brand.orange',
       textTransform: 'uppercase',

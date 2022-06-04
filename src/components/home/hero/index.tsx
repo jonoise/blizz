@@ -78,7 +78,7 @@ const Hero = () => {
               <a>
                 <Flex
                   width={'100%'}
-                  h={{ base: '300px', lg: '180px' }}
+                  h={{ base: '200px', md: '350px', lg: '180px' }}
                   bg='black'
                   backgroundImage={`url(${article.img})`}
                   backgroundSize='cover'
@@ -98,7 +98,7 @@ const Hero = () => {
                       color={'brand.yellow'}
                       fontWeight='bold'
                       textShadow='0 0 1px transparent, 0 1px 2px rgb(0 0 0 / 80%)'
-                      fontSize={{ base: 'xl', xl: 'xs' }}
+                      fontSize={{ base: 'sm', md: 'lg', xl: 'xs' }}
                     >
                       {article.title}
                     </Text>

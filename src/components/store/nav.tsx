@@ -6,7 +6,7 @@ const StoreNav = () => {
   return (
     <Flex h={'60px'} bg={'store.dark'} px='5' justify={'space-between'}>
       <Image w={'200px'} src='/battlenet.svg' />
-      <HStack spacing={10}>
+      <HStack spacing={10} display={{ base: 'none', lg: 'flex' }}>
         <Link href={'/'}>
           <a>
             <HStack>

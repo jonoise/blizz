@@ -3,10 +3,17 @@ import { NavItemProps } from '@appTypes/nav'
 import { Flex, HStack, Image } from '@chakra-ui/react'
 import Link from 'next/link'
 import NavLink from './NavLink'
+import Mobile from './Mobile'
 
 const Navbar = () => {
   return (
-    <Flex bg='#0A0E13' align={'center'} h={10} px={10} justify='space-between'>
+    <Flex
+      bg='store.dark'
+      align={'center'}
+      h={10}
+      px={10}
+      justify='space-between'
+    >
       <HStack spacing={5}>
         <Link href={'/'} passHref>
           <a>
@@ -18,12 +25,13 @@ const Navbar = () => {
             />
           </a>
         </Link>
-        <HStack spacing={5}>
+        <HStack display={'none'} spacing={5}>
           {items.map((item) => (
             <NavLink key={item.id} link={item} />
           ))}
         </HStack>
       </HStack>
+      <Mobile links={items} />
     </Flex>
   )
 }
